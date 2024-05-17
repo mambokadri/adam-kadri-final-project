@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/script.js"></script>        
+    <script src="js/shop.js"></script>        
+   
+    <link rel="stylesheet" href="style.css">
+    <title>Clothing Website</title>
+</head>
+<body>
+
+<div class="navbar">
+    
+    <div class="logo">
+        <img src="images/Logo.png" width="75px" alt="ClothingStore Logo">
+    </div>
+   
+    <ul class="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#News">News</a></li>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#add">Add</a></li>
+        <li><a href="#contact">Contact us</a></li>
+    </ul>
+
+    <form class="search-form">
+        <input type="text" placeholder="Search...">
+        <button type="submit">Search</button>
+    </form>
+</div>
+
+<section id="home">
+    <div class="home-content">
+        <div class="text-content">
+            <h2>Welcome to Mambo</h2>
+            <p>Discover the latest fashion trends and styles.</p>
+            <p>Stay trendy, stay fashionable!</p>
+            <a href="#shop">
+                <button class="home-button">Shop Now</button>
+            </a> 
+        </div>
+    </div>
+</section>
+<section id="News">
+  <h2>Latest News</h2>
+
+  <div class="news-container">
+      <div class="news-item">
+          <img src="images/news/adidas.png" alt="News 1" class="news-image">
+          <h3 class="news-title">New Drops</h3>
+          <p class="news-summary">Summer fits now available on our shop</p>
+      </div>
+
+      <div class="news-item">
+          <img src="images/news/nike.jpg" alt="News 2" class="news-image">
+          <h3 class="news-title">Buy 2 Get 1 Free</h3>
+          <p class="news-summary">Buy any 2 Nike products and get the Third for Free</p>
+      </div>
+
+      <div class="news-item">
+          <img src="images/news/under armour.png" alt="News 3" class="news-image">
+          <h3 class="news-title">50% Sale</h3>
+          <p class="news-summary">50% less on the next Under Armour product you buy</p>
+      </div>
+  </div>
+</section> 
+<section id="shop">
+  <h2>Shop</h2>
+  
+  <div class="filters">
+      <label for="category-filter">Category:</label>
+      <select id="category-filter">
+          <option value="all">All</option>
+          <option value="Shirt">Shirt</option>
+          <option value="Pants">Pants</option>
+          <option value="Shoes">Shoes</option>
+      </select>
+
+      <label for="brand-filter">Brand:</label>
+      <select id="brand-filter">
+          <option value="all">All</option>
+          <option value="Adidas">Adidas</option>
+          <option value="Nike">Nike</option>
+          <option value="Under Armour">Under Armour</option>
+      </select>
+  </div>
+
+  <div class="products-container"></div>
+</section>
+<section id="add">
+    <h2>Add Product</h2>
+    <form id="add-product-form" enctype="multipart/form-data">
+        <label for="product-title">Title:</label>
+        <input type="text" id="product-title" name="product-title" required>
+
+        <label for="product-description">Description:</label>
+        <input type="text" id="product-description" name="product-description" required>
+
+        <label for="product-category">Category:</label>
+        <select id="product-category" name="product-category">
+            <option value="Shirt">Shirt</option>
+            <option value="Pants">Pants</option>
+            <option value="Shoes">Shoes</option>
+        </select>
+
+        <label for="product-brand">Brand:</label>
+        <select id="product-brand" name="product-brand">
+            <option value="Adidas">Adidas</option>
+            <option value="Nike">Nike</option>
+            <option value="Under Armour">Under Armour</option>
+        </select>
+
+        <label for="product-size">Size:</label>
+        <input type="text" id="product-size" name="product-size" required>
+
+        <label for="product-image">Image:</label>
+        <input type="file" id="product-image" name="product-image" accept="image/*" required>
+
+        <button type="submit">Add Product</button>
+    </form>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div class="message-container" id="message-container"></div>
+</section>
+   
+
+</body>
+</html>

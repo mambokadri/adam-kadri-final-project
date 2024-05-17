@@ -1,0 +1,361 @@
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+.navbar {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #8B4513; 
+    color: #ffffff;
+    transition: box-shadow 0.3s ease; /* Transition for the shadow effect */
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1); /* Initial shadow */
+}
+
+.navbar.scrolled {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Shadow when scrolled */
+}
+     
+
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    
+    padding-bottom: 5px; 
+}
+
+.menu li {
+    margin: 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: #6B3B07; 
+}
+
+.search-form {
+    display: flex;
+    gap: 10px;
+}
+
+.search-form input[type="text"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #8B4513; 
+}
+
+.search-form button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #8B4513; 
+    color: #ffffff; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-form button[type="submit"]:hover {
+    background-color: #6B3B07; 
+}
+
+
+#home {
+    background-image: url('images/background\ image.webp'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 50px 0;
+    height: calc(100vh - 70px);
+    
+}
+
+.home-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.text-content {
+    text-align: center;
+}
+
+.text-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.text-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.home-button {
+    padding: 10px 20px;
+    background-color: #8B4513; 
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+    background-color: #6B3B07; 
+}
+#News {
+    padding: 50px 0;
+    background-color:#89cff0;
+    text-align: center;  
+}
+
+#News h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+    color:white;
+    
+}
+
+.news-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.news-item {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #8B4513; 
+    border-radius: 5px;
+    text-align: center;
+    background-color: #f9f9f9; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.news-image {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.news-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #8B4513; 
+}
+
+.news-summary {
+    font-size: 16px;
+    color: #666666;
+} 
+
+
+
+#shop {
+    padding: 50px 0;
+    background-color:#89cff0; 
+    text-align: center;
+}
+#shop h2 {
+    font-size: 36px; 
+    color: #ffffff; 
+    padding: 15px; 
+    background-color: #8B4513; 
+    border-radius: 8px;
+    display: block; 
+    margin-bottom: 20px; 
+}
+
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.product-card {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #8B4513;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+.product-card.enlarged {
+    transform: scale(1.1); /* Increase the scale to enlarge the card */
+}
+
+.product-image {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.product-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #8B4513;
+}
+
+.product-description {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.product-category,
+.product-brand,
+.product-size {
+    font-size: 14px;
+    color: #666666;
+}
+
+
+.product-category,
+.product-brand,
+.product-size {
+    font-size: 14px;
+    color: #666666;
+}
+.delete-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: rgb(38, 37, 37); 
+    cursor: pointer;
+}
+#add-product-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#add-product-form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #8B4513;
+}
+
+#add-product-form input[type="text"],
+#add-product-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #8B4513;
+    border-radius: 5px;
+}
+
+#add-product-form button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #8B4513;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#add-product-form button[type="submit"]:hover {
+    background-color: #6B3B07;
+}
+#contact {
+    padding: 20px;
+    background-color: #f9f9f9; /* Light gray background */
+}
+
+#contact h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #8B4513; /* Dark brown text color */
+}
+
+#contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #8B4513; /* Dark brown text color */
+}
+
+#contact-form input[type="text"],
+#contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #8B4513; /* Dark brown border */
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#contact-form textarea {
+    height: 100px;
+}
+
+#contact-form button {
+    padding: 10px 20px;
+    background-color: #8B4513; /* Dark brown button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    background-color: #6B3B07; /* Darker brown on hover */
+}
+
+.message-container {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #8B4513; /* Dark brown border */
+    border-radius: 5px;
+    background-color: #fff;
+    color: #8B4513; /* Dark brown text color */
+}
+
+
+
+ 
+
+
